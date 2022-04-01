@@ -1,6 +1,8 @@
 <?php
 namespace FBP;
 
+use FBF\inc\FBF_Tables;
+
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 /**
@@ -55,10 +57,12 @@ final class Core
     
     function fbf_install()
     {
+        FBF_Tables::tableUp();
     }
 
     function fbf_uninstall()
     {
+        FBF_Tables::tableDown();
     }
     
 }
