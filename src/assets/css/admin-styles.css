@@ -1,0 +1,48 @@
+.fbf-title {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.fbf-container-list {
+    width: 80%;
+    margin: auto;
+    padding-top: 5%;
+    border-radius: 5px;
+}
+
+.fbf-container-list h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.fbf-container-list table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    background: #fff;
+    border-spacing: 0;
+    display: table;
+    border: 1px solid #ccc;
+}
+
+.fbf-container-list table tbody th {
+    font-weight: 700;
+    text-align: left;
+    padding: 5px;
+}
+
+.fbf-container-list table tbody tr {
+    border-bottom: 1px solid #ddd;
+}
+
+.fbf-container-list table tbody tr td {
+    padding: 5px;
+}
+
+.fbf-container-list table tbody tr:nth-child(odd) {
+    background-color: #fff;
+}
+
+.fbf-container-list table tbody tr:nth-child(even) {
+    background-color: #e7e9eb;
+}

@@ -1,10 +1,10 @@
 {
-    "name": "fbp/form-feedback",
+    "name": "fbf/form-feedback",
     "description": "Plugin for managing form feedbacks",
     "type": "plugin",
     "autoload": {
         "psr-4": {
-            "FBP\\": "src/"
+            "FBF\\": "src/"
         }
     },
     "license": "MIT",

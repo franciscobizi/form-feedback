@@ -17,9 +17,9 @@ use FBF\Core;
 /**
  *    Create table on activation hook event
  */
-register_activation_hook(__FILE__, [(new Core()), 'fbf_install']);
+register_activation_hook(__FILE__, [(new Core), 'fbf_install']);
 
 /**
  *    Drop table on unnstall hook event
  */
-register_uninstall_hook(__FILE__, [(new Core()), 'fbf_uninstall']);
+register_uninstall_hook(__FILE__, [(new Core), 'fbf_uninstall']);

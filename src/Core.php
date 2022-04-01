@@ -27,6 +27,7 @@ final class Core
         $this->load_on_init();
 
 		add_action('wp_enqueue_scripts',			[$this, '_fbp_enquee_scripts']);
+        add_action('admin_enqueue_scripts',			[$this, '_fbp_admin_scripts']);
         
         //ajax 
         add_action('wp_ajax_fbp_requests',          [$this, '_fbp_ajax_requests']);
@@ -43,6 +44,11 @@ final class Core
     public function _fbp_ajax_requests()
     {
         require_once dirname(__FILE__)."/inc/ajax.php";
+    }
+
+    public function _fbp_admin_scripts()
+    {
+        wp_enqueue_style("fbp-admin-style", plugins_url('/src/assets/css/admin-styles.css', dirname(__FILE__)) ,false, time(), 'all');
     }
 
     public function _fbp_enquee_scripts()
