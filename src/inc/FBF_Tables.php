@@ -30,4 +30,14 @@ class FBF_Tables
         $table_name = $wpdb->prefix."fbf_feedbacks";
         $wpdb->query( "DROP TABLE IF EXISTS {$table_name}" );
     }
+
+    public static function insert($data)
+    {
+        global $wpdb;
+        $table_name = $wpdb->prefix."fbf_feedbacks";
+
+        $format = array('%s','%s','%s');
+        $wpdb->insert($table_name,$data,$format);
+        return $wpdb->insert_id;
+    }
 }

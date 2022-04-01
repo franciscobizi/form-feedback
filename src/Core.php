@@ -26,12 +26,12 @@ final class Core
 	{
         $this->load_on_init();
 
-		add_action('wp_enqueue_scripts',			[$this, '_fbp_enquee_scripts']);
-        add_action('admin_enqueue_scripts',			[$this, '_fbp_admin_scripts']);
+		add_action('wp_enqueue_scripts',			[$this, '_fbf_enquee_scripts']);
+        add_action('admin_enqueue_scripts',			[$this, '_fbf_admin_scripts']);
         
         //ajax 
-        add_action('wp_ajax_fbp_requests',          [$this, '_fbp_ajax_requests']);
-        add_action('wp_ajax_nopriv_fbp_requests',   [$this, '_fbp_ajax_requests']);
+        add_action('wp_ajax_fbf_requests',          [$this, '_fbf_ajax_requests']);
+        add_action('wp_ajax_nopriv_fbf_requests',   [$this, '_fbf_ajax_requests']);
     }
 
     public function load_on_init()
@@ -41,21 +41,21 @@ final class Core
         require_once dirname(__FILE__) . "/shortcodes/form-shortcode.php";
     }
 
-    public function _fbp_ajax_requests()
+    public function _fbf_ajax_requests()
     {
         require_once dirname(__FILE__)."/inc/ajax.php";
     }
 
-    public function _fbp_admin_scripts()
+    public function _fbf_admin_scripts()
     {
-        wp_enqueue_style("fbp-admin-style", plugins_url('/src/assets/css/admin-styles.css', dirname(__FILE__)) ,false, time(), 'all');
+        wp_enqueue_style("fbf-admin-style", plugins_url('/src/assets/css/admin-styles.css', dirname(__FILE__)) ,false, time(), 'all');
     }
 
-    public function _fbp_enquee_scripts()
+    public function _fbf_enquee_scripts()
     {
-        wp_enqueue_style("fbp-style", plugins_url('/src/assets/css/styles.css', dirname(__FILE__)) ,false, time(), 'all');
-        wp_enqueue_script("fbp-js", plugins_url('/src/assets/js/script.js', dirname(__FILE__)), array('jquery'), time(), true);
-        wp_localize_script('fbp-js', 'ajax_var', 
+        wp_enqueue_style("fbf-style", plugins_url('/src/assets/css/styles.css', dirname(__FILE__)) ,false, time(), 'all');
+        wp_enqueue_script("fbf-js", plugins_url('/src/assets/js/script.js', dirname(__FILE__)), array('jquery'), time(), true);
+        wp_localize_script('fbf-js', 'ajax_var', 
                                 array(
                                         'endpoint' => admin_url('admin-ajax.php'),
                                     ));
