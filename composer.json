@@ -1,0 +1,16 @@
+{
+    "name": "fbp/form-feedback",
+    "description": "Plugin for managing form feedbacks",
+    "type": "plugin",
+    "autoload": {
+        "psr-4": {
+            "FBP\\": "src/"
+        }
+    },
+    "license": "MIT",
+    "authors": [{
+        "name": "Francisco Bizi",
+        "email": "dev@gmail.com"
+    }],
+    "require": {}
+}
