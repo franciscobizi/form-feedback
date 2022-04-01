@@ -12,7 +12,7 @@ define('PLUGIN_FBP_DIR', plugin_dir_path(__FILE__));
 define('PLUGIN_FBP_URL', plugin_dir_url(__FILE__));
 require_once("vendor/autoload.php");
 
-use FBP\Core;
+use FBF\Core;
 
 /**
  *    Create table on activation hook event

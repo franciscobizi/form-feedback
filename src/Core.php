@@ -1,5 +1,5 @@
 <?php
-namespace FBP;
+namespace FBF;
 
 use FBF\inc\FBF_Tables;
 
