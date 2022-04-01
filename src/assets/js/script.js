@@ -8,7 +8,8 @@ jQuery(document).ready(function($) {
             dataType: 'application/json',
             data: $(this).serialize(),
             success: function(data) {
-                console.log(data);
+                console.log(data.data.message);
+                // Todo: display message on page
             }
         });
 
